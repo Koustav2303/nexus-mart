@@ -7,18 +7,18 @@ export default function ProductShowcase({ showcaseRef }) {
       {/* Background Glow */}
       <div className="absolute inset-0 bg-blue-500/20 blur-[100px] rounded-full w-3/4 h-3/4 m-auto pointer-events-none"></div>
       
-      {/* Glassmorphism Card */}
-      <div className="relative w-full max-w-md aspect-square rounded-3xl border border-white/10 bg-slate-900/40 backdrop-blur-xl p-8 shadow-2xl flex flex-col items-center justify-center group cursor-pointer overflow-hidden">
+      {/* Product frame — clean, no glass */}
+      <div className="relative w-full max-w-md flex flex-col items-center justify-center py-4 group cursor-pointer">
         
         {/* Actual High-Res Product Image */}
         <img 
           src={headsetImg} 
           alt="Quantum Headset" 
-          className="w-56 h-56 md:w-64 md:h-64 object-contain group-hover:scale-110 transition-transform duration-700 ease-out drop-shadow-[0_0_25px_rgba(34,211,238,0.2)] relative z-10"
+          className="w-[17rem] h-[17rem] sm:w-[19rem] sm:h-[19rem] md:w-[22rem] md:h-[22rem] object-contain group-hover:scale-110 transition-transform duration-700 ease-out drop-shadow-[0_0_25px_rgba(34,211,238,0.2)] relative z-10"
         />
         
         {/* Floating UI Elements over the product */}
-        <div className="absolute bottom-6 left-6 right-6 bg-slate-950/80 backdrop-blur-md rounded-2xl p-4 border border-white/5 flex justify-between items-center transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 z-20">
+        <div className="absolute bottom-0 left-0 right-0 mx-auto max-w-sm bg-slate-950 rounded-2xl p-4 border border-slate-800 flex justify-between items-center transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 z-20 shadow-xl">
           <div>
             <p className="text-white font-bold">Quantum Headset</p>
             <p className="text-cyan-400 text-sm">$299.00</p>
